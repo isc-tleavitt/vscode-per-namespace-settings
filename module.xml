@@ -18,7 +18,7 @@
           zpm "vscode-per-namespace-settings publish -v -Ddelete="
       -->
       <Default Name="delete" Value="s" />
-      <Invoke Class="%SYSTEM.OBJ" Method="DeletePackage" CheckStatus="true">
+      <Invoke Class="%SYSTEM.OBJ" Method="DeletePackage" CheckStatus="true" When="After">
         <Arg>%Z.IPM.Bootstrap${delete}</Arg>
       </Invoke>
     </Module>    
